@@ -99,7 +99,7 @@ contract TestOurToken is Test {
         vm.expectRevert();
         ourToken.transferFrom(bob, alice, 1 ether);
     }
-    
+
     /*//////////////////////////////////////////////////////////////
                             EVENT TESTS
     //////////////////////////////////////////////////////////////*/
