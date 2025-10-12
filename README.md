@@ -1,66 +1,131 @@
-## Foundry
+🚀 Project Overview
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+OurToken (OTK) is a standard-compliant ERC-20 token built using Solidity and deployed with Foundry.
+This project demonstrates full ERC-20 functionality, including minting, transfers, allowances, event logging, and fuzz testing — all while following best practices.
 
-Foundry consists of:
+Key Highlights:
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+-Fully ERC-20 compliant (EIP-20 standard)
+-Mintable at deployment (initialSupply)
+-Secure transfers and approvals
+-Event emission for transparency (Transfer & Approval)
+-Extensive testing: unit tests and event checks
+-Deployable with Foundry scripts
+-Gas-efficient and secure by design
 
-## Documentation
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-https://book.getfoundry.sh/
+📦 Features
 
-## Usage
+-Token Details:
+Name: OurToken
+Symbol: OTK
+Decimals: 18
+Initial Supply: 1000 OTK (can be customized)
 
-### Build
+-Core ERC-20 Functions:
+transfer() – secure token transfers
+approve() & allowance() – manage delegated spending
+transferFrom() – spend tokens with prior approval
 
-```shell
-$ forge build
-```
+-Event Logging:
+Transfer – emitted on token transfers
+Approval – emitted when allowances are set
 
-### Test
+-Testing & Security:
+Unit tests for all core functions
+Fuzz testing for random transfer amounts
+Zero-address & insufficient balance checks
+Approval and transferFrom validation
 
-```shell
-$ forge test
-```
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-### Format
+🏗️ Technology Stack
 
-```shell
-$ forge fmt
-```
+-Solidity (v0.8.18) — smart contract development
+-Foundry — testing framework, fuzz testing, and deployment
+-OpenZeppelin — audited ERC-20 base contract
+-Ethereum — blockchain network for deployment
 
-### Gas Snapshots
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-```shell
-$ forge snapshot
-```
 
-### Anvil
+💻 Getting Started
 
-```shell
-$ anvil
-```
+-Clone the repository
+git clone  [repo](https://github.com/AVISHKAR666/ERC20-Cryptocurrency)
+cd ERC20-Cryptocurrency
 
-### Deploy
+-Install Open Zeppelin
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
+-Build the project
+make build
 
-### Cast
+-Run tests
+make test
 
-```shell
-$ cast <subcommand>
-```
+-Deploy contract (example)
+make deploy
 
-### Help
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+🧩 How It Works
+
+-Deployment & Minting:
+OurToken is minted to the deployer at contract creation (initialSupply).
+
+-Token Transfers:
+Secure token movement between accounts using transfer().
+
+-Allowance Mechanism:
+Users can approve another address to spend tokens (approve() & transferFrom()).
+
+-Event Emissions:
+Transfer emitted on token transfers
+Approval emitted when allowance is set
+
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+🔒 Security & Best Practices
+
+-Prevents zero-address transfer
+-Validates sufficient balances for transfers
+-Uses Solidity 0.8.x overflow protection (no SafeMath required)
+-Prevents unauthorized spending via allowances
+-Extensive tests and fuzzing ensure robustness
+
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+🌟 Biggest Takeaways
+
+-Implemented a secure, standard ERC-20 token
+-Learned deploying with Foundry scripts
+-Applied unit tests, event testing, and fuzz tests
+-Built developer-ready token contract with OpenZeppelin base
+
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+📚 Skills Demonstrated
+
+-Solidity smart contract development
+-ERC-20 tokenomics understanding
+-Secure token transfer & allowance logic
+-Foundry testing & scripting
+-Contract deployment & verification on Ethereum
+
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+🔗 Useful Links
+
+[GitHub Repo](https://github.com/AVISHKAR666/ERC20-Cryptocurrency)
+
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+🙏 Acknowledgements
+
+-Cyfrin Updraft & Patrick Collins — Advanced Foundry course
+-OpenZeppelin — for audited ERC-20 standards
+-Ethereum community for tooling and ecosystem support
+
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
